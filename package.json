@@ -1,5 +1,5 @@
 {
-  "name": "CLVegas2016-DevNetZone-ActivitiesAPI",
+  "name": "DevNetZone-Activities",
   "private": true,
   "version": "0.1.0",
   "description": "Spark & Tropo demoes the DevNetZone activites in CLVegas edition 2016",
@@ -32,7 +32,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ObjectIsAdvantag/CLVegas2016-DevNetZone-Activities-API.git"
+    "url": "git://github.com/ObjectIsAdvantag/DevNetZone-Activities.git"
   },
   "author": "Stève Sfartz",
   "license": ""

@@ -1,4 +1,4 @@
-# Realtime activites in the DevNetZone at CLVegas 2016 edition
+# Check real-time activities in the DevNetZone at Cisco Live Vegas 2016
 
 Call the +1-323-374-3199 (a Tropo self-service IVR - Interactive Voice Response - attached to a Vegas Tropo phone number) 
 - have the next DevNetZone activities interactively spoken to you (via Tropo Speech To Text),
