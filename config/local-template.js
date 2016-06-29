@@ -82,8 +82,8 @@ module.exports = {
 
   environment: process.env.NODE_ENV || 'run',
 
+/* CONFIG: Create a Postgre add-on on Clever-Cloud and reaplce DB connections settings below 
   connections: {
-    // Create a Postgre add-on on Clever-Cloud and change DB connections settings below 
     clevercloud: {
       adapter: 'sails-postgresql',
       host: "ZZZZZZZZZZZZZZZZZZ-postgresql.services.clever-cloud.com",
@@ -93,4 +93,5 @@ module.exports = {
       database: "ZZZZZZZZZZZZZZZZZZ"
     }
   }
+  */
 };

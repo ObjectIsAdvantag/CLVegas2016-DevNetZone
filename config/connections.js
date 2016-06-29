@@ -35,7 +35,6 @@ module.exports.connections = {
   clevercloud: {
     adapter: 'sails-postgresql',
     host: process.env.POSTGRESQL_ADDON_HOST,
-    //host: process.env.POSTGRESQL_ADDON_URI,
     port: process.env.POSTGRESQL_ADDON_PORT,
     user: process.env.POSTGRESQL_ADDON_USER,
     password: process.env.POSTGRESQL_ADDON_PASSWORD,
