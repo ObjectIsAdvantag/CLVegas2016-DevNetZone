@@ -30,6 +30,7 @@ module.exports.policies = {
 
   'ActivityController': {
     'create': ['is-admin','no-cache'], // Admin only
+    'delete': ['is-admin','no-cache'], // Admin only
     'find': ['no-cache'], // Public access
     'findOne': ['no-cache'], // Public access
     'findNext': ['no-cache']  // Public access
