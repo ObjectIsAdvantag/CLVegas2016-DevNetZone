@@ -4,9 +4,9 @@ var request = require("request");
 var moment = require("moment");
 
 // PRODUCTION
-//var apiEndpoint = 'https://devnetzone.cleverapps.io/api/v1/activities/';
+var apiEndpoint = 'https://devnetzone.cleverapps.io/api/v1/activities/';
 // LOCAL ENV
-var apiEndpoint = 'http://localhost:1337/api/v1/activities/';
+//var apiEndpoint = 'http://localhost:1337/api/v1/activities/';
 
 var options = { method: 'POST',
     url: apiEndpoint,
@@ -119,7 +119,7 @@ function postActivity(csvrow) {
     });
 }
 
-fs.createReadStream('input2.csv')
+fs.createReadStream('activities.csv')
     .pipe(parse({delimiter: ';'}))
     .on('data', function(csvrow) {
         postActivity(csvrow);    

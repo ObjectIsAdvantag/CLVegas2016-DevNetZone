@@ -1,0 +1,22 @@
+{
+  "name": "fill",
+  "version": "1.0.0",
+  "description": "batch to inject activities into the API from a CSV file",
+  "main": "fill.js",
+  "dependencies": {
+    "async": "^2.0.0-rc.6",
+    "csv": "^1.1.0",
+    "csv-parse": "^1.1.2",
+    "moment": "^2.14.1",
+    "node-serial": "^0.1.1",
+    "request": "^2.72.0",
+    "should": "^9.0.2",
+    "fs": "^0.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

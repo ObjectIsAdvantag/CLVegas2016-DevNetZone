@@ -21,7 +21,7 @@ module.exports = {
     connection: 'clevercloud',
     // DANGEROUS ZONE: comment to update production schema
     // migrate: 'alter'
-    migrate: 'drop'
+    migrate: 'create'
   }
 
 };
