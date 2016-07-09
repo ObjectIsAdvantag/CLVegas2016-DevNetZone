@@ -47,6 +47,7 @@ module.exports.routes = {
   ***************************************************************************/
 
   , 'GET /api/v1/activities/next': 'ActivityController.findNext'
+  , 'GET /api/v1/activities/current': 'ActivityController.findCurrent'
 
   , 'GET /api/v1/spark/register': 'SparkController.registerUser'
 

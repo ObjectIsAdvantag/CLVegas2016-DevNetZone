@@ -6,7 +6,7 @@
  */
 
 module.exports = {
-  autoPK:true,
+  autoPK:false,
   schema:true,
 
   attributes: {
@@ -20,55 +20,70 @@ module.exports = {
       required: true
     },
 
-    url: {
-      type: 'url', // where to get details about the session
+     url: {
+       type: 'string', // where to get details about the session
+       required: true
+     },
+
+     description: {
+       type: 'string', // summary of what's happening
+       size: 2048,
+       required: true
+     },
+
+    beginDate: {
+      type: 'datetime',  // UTC format
       required: true
     },
 
-    description: {
-      type: 'string', // summary of what's happening
-      size: 2048,
-      required: false
-    },
-
-    day: {
-      type: 'string',
-      enum: ['week-end', 'monday', 'tuesday', 'wednesday', 'thursday'],
+    beginTime: {
+      type: 'string',  // local time 
       required: true
     },
 
-   
-    begin: {
-      type: 'string',  // local time format
+    beginDay: {
+      type: 'string', // local time
+      enum: ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
+      required: true
+    },    
+
+    endDate: {
+      type: 'datetime', // local time format
        required: true
     },
 
-    
-    end: {
+  endTime: {
+      type: 'string',  // local time 
+     required: true
+   },
+
+    endDay: {
+      type: 'string', // local time
+      enum: ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
+      required: true
+   }, 
+
+    duration: {
       type: 'string', // local time format
        required: true
     },
 
-    beginDate: {
-      type: 'datetime',  // CET 
-      required: true
-    },
-
-    endDate: {
-      type: 'datetime', // CET 
-      required: true
-    },
-
     category: { 
       type: 'string',
-      enum: ['workshop', 'session', 'panel', 'demo', 'lab', 'event'],
+      //enum: ['workshop', 'session', 'panel', 'demo', 'lab', 'event', 'keynote'],
       defaultsTo: 'session',
+      required: true
+    },
+
+    technology: { 
+      type: 'string',
+      //enum: ['workshop', 'session', 'panel', 'demo', 'lab', 'event', 'keynote'],
       required: true
     },
 
     location: {
       type: 'string',
-      enum: ['ClassRoom1', 'ClassRoom2', 'DemoPods', 'LearningLab', 'Theater', 'WorkBench1', 'WorkBench2', 'WorkBench3', 'WorkBench4', 'Other'],
+      //enum: ['ClassRoom1', 'ClassRoom2', 'DemoPods', 'LearningLab', 'Theater', 'WorkBench1', 'WorkBench2', 'WorkBench3', 'WorkBench4', 'DevNetZone'],
       required: true
     },
 
@@ -83,8 +98,13 @@ module.exports = {
       required: true
     },
 
+    speaker_email: { 
+      type: 'string', // May contain several speakers name
+      required: true
+    },
+
     speaker_url: { 
-      type: 'url', // Only to one speaker
+      type: 'string', // Only to one speaker
       required: true
     },
 

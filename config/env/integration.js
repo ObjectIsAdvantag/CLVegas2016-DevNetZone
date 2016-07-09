@@ -18,8 +18,8 @@ module.exports = {
    ***************************************************************************/
 
   models: {
-    connection: 'clevercloud',
-    migrate: 'alter'
+    connection: 'integration',
+    migrate: 'safe'
   }
 
 };

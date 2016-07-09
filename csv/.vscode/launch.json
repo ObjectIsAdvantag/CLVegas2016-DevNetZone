@@ -5,7 +5,7 @@
             "name": "Launch",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/app.js",
+            "program": "${workspaceRoot}/work4.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
@@ -15,7 +15,7 @@
                 "--nolazy"
             ],
             "env": {
-                "NODE_ENV": "integration"
+                "NODE_ENV": "development"
             },
             "externalConsole": false,
             "sourceMaps": false,

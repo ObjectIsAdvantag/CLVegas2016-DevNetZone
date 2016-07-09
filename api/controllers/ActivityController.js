@@ -8,14 +8,37 @@
 module.exports = {
 	findNext: function (req, res) {
         var now = new Date(Date.now());
+
+        // set limit
+        var limit = req.param('limit');
+        if (!limit) {
+            limit = 10;
+        }
        
-        Activity.find({ beginDate: { ">=" : now }, sort: "beginDate ASC" }, function (err, found) {
+        Activity.find({ beginDate: { ">=" : now }, sort: "beginDate ASC", limit:limit }, function (err, found) {
             if (err) return res.json(500, { err: "could not retreive any activities" });
 
-            // Because we love being RESTfull-ish
-            if (found.length == 0) return res.json(204, "");
-
             return res.json(200, found);
+        });
+    },
+
+    findCurrent: function (req, res) {
+        // check if there is a date specified
+        var now = req.param('now');
+        if (!now) {
+            now = new Date(Date.now());
+        }
+
+        // set limit
+        var limit = req.param('limit');
+        if (!limit) {
+            limit = 10;
+        }
+       
+        Activity.find().where({ endDate: { ">=" : now }}).where({ beginDate: { "<=" : now }}).sort("beginDate ASC").limit(limit).exec (function (err, found) {
+            if (err) return res.json(500, { err: "could not retreive any activities", details: err });
+
+            return res.json(200, filtered);
         });
     }
 };

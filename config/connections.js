@@ -38,7 +38,10 @@ module.exports.connections = {
     port: process.env.POSTGRESQL_ADDON_PORT,
     user: process.env.POSTGRESQL_ADDON_USER,
     password: process.env.POSTGRESQL_ADDON_PASSWORD,
-    database: process.env.POSTGRESQL_ADDON_DB
+    database: process.env.POSTGRESQL_ADDON_DB,
+    pool: true,
+    poolSize: 3,
+    waitForConnections: true
   }
 
 

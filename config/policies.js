@@ -33,7 +33,8 @@ module.exports.policies = {
     'destroy': ['is-admin','no-cache'], // Admin only
     'find': ['no-cache'], // Public access
     'findOne': ['no-cache'], // Public access
-    'findNext': ['no-cache']  // Public access
+    'findNext': ['no-cache'],  // Public access
+    'findCurrent': ['no-cache']  // Public access
   },
 
   'SparkController': {
