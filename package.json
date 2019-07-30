@@ -1,11 +1,11 @@
 {
   "name": "DevNetZone-Activities",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Spark & Tropo demoes the DevNetZone activites in CLVegas edition 2016",
   "keywords": ["ciscospark", "tropo", "clvegas2016", "devnetzone"],
   "dependencies": {
-    "ejs": "2.3.4",
+    "ejs": "2.6.2",
     "grunt": "0.4.5",
     "grunt-contrib-clean": "0.6.0",
     "grunt-contrib-coffee": "0.13.0",
